@@ -7,10 +7,10 @@ urlpatterns = [
     path('FAQ/',FaqPage.as_view(), name='faqpage'),
     path('Team/',TeamPage.as_view(), name='teampage'),
     path('<slug:slug>', ServicesDetail.as_view(), name='service_detail'),
+    path('<slug:slug>', ServicesDetail.as_view(), name='service_detail'),
     path('Contactus/',ContactUs.as_view(), name='contactus'),
-    path('<slug:slug>', ArticleDetails.as_view(), name='article_detail'),
-    path('<slug:slug>', ServicesDetail.as_view(), name='service_detail')
-  
+    path('<slug:slug>', ArticleDetails.as_view(), name='article_detail')
+    
     
     
     

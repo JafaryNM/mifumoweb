@@ -128,7 +128,7 @@
     <div class="container">
         <div class="section-title white-title">
             <span>Our Methodologies</span>
-            <h2>You Can Protect Your Organization’s Cybersecurity By Us</h2>
+            <h2>We make sure we meet your requirements and quality products</h2>
         </div>
 
         <div class="row">
@@ -194,33 +194,85 @@
         </div>
 
         <div class="row">
-            {% for service in services %}
             <div class="col-lg-3 col-sm-6">
                 <div class="single-services">
                     <div class="services-img">
                         <a href="services-details.html">
-                            <img src="{{service.image.url}}" alt="Image">
+                            <img src="{% static 'assets/img/services/services-1.jpg'%}" alt="Image">
                         </a>
                     </div>
 
                     <div class="services-content">
-                        <h3><a href="{{service.get_absolute_url}}">{{service.title}}</a></h3>
-                        <p>{{service.descritption}}.</p>
+                        <h3><a href="services-details.html">Website Design</a></h3>
+                        <p>We design good and attractive website that will attracts more customers.</p>
 
-                        <a href="" class="read-more">
+                        <a href="services-details.html" class="read-more">
                             Read More
                             <i class="flaticon-right-arrow"></i>
                         </a>
                     </div>
                 </div>
             </div>
-              
-            {% endfor %}
 
-          
-            
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-services">
+                    <div class="services-img">
+                        <a href="services-details.html">
+                            <img src="{% static 'assets/img/services/services-2.jpg'%}" alt="Image">
+                        </a>
+                    </div>
 
-          
+                    <div class="services-content">
+                        <h3><a href="services-details.html">Web Hosting</a></h3>
+                        <p>We are responsible for your online presence with  24/7 support</p>
+
+                        <a href="services-details.html" class="read-more">
+                            Read More
+                            <i class="flaticon-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-services">
+                    <div class="services-img">
+                        <a href="services-details.html">
+                            <img src="{% static 'assets/img/services/services-3.jpg'%}" alt="Image">
+                        </a>
+                    </div>
+
+                    <div class="services-content">
+                        <h3><a href="services-details.html">Professional Emails</a></h3>
+                        <p>We make your business more professional using professional emails.</p>
+
+                        <a href="services-details.html" class="read-more">
+                            Read More
+                            <i class="flaticon-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-services">
+                    <div class="services-img">
+                        <a href="services-details.html">
+                            <img src="{% static 'assets/img/services/services-4.jpg'%}" alt="Image">
+                        </a>
+                    </div>
+
+                    <div class="services-content">
+                        <h3><a href="services-details.html">Software Developement</a></h3>
+                        <p>We develop and support that solve your problems and make your business shine over your competitors.</p>
+
+                        <a href="services-details.html" class="read-more">
+                            Read More
+                            <i class="flaticon-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -307,9 +359,9 @@
                 <div class="single-pricing overly-one">
                     <div class="overly-two">
                         <div class="pricing-title">
-                            <h3>Basic</h3>
+                            <h3>Standard</h3>
                             <h2><Sub>Tsh</Sub>210000</h2>
-                            <span>/Per month</span>
+                            <span>/Per Year</span>
                         </div>
 
                         
@@ -351,12 +403,12 @@
     <div class="container">
         <div class="section-title">
             <span>Latest News</span>
-            <h2>Read The Latest Articles From Us</h2>
+            <h2>Stay Up-To-Date with the latest digital trends</h2>
         </div>
 
         <div class="row">
            {% for article in articles %}
-           <div class="col-lg-4 col-md-6">
+           <div class="col-lg-6 col-md-6">
             <div class="single-blog">
                 <div class="blog-img">
                     <a href="blog-details.html">
@@ -367,6 +419,11 @@
                 <div class="blog-content">
                     <span>{{article.date}}</span>
                     <h3><a href="{{ article.get_absolute_url }}">{{article.title}}</a></h3>
+                   
+                    <a href="{{article.get_absolute_url}}" class="read-more m-2">
+                        Read More
+                        <i class="flaticon-right-arrow"></i>
+                    </a>
                 </div>
             </div>
         </div>
