@@ -68,7 +68,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about-img">
-                    <img src="{% static 'assets/img/about-img-5.jpg'%}" alt="Image">
+                    <img src="{% static 'assets/img/about.png'%}" alt="Image">
                 </div>
             </div>
 
@@ -194,85 +194,33 @@
         </div>
 
         <div class="row">
+            {% for service in services %}
             <div class="col-lg-3 col-sm-6">
                 <div class="single-services">
                     <div class="services-img">
                         <a href="services-details.html">
-                            <img src="{% static 'assets/img/services/services-1.jpg'%}" alt="Image">
+                            <img src="{{service.image.url}}" alt="Image">
                         </a>
                     </div>
 
                     <div class="services-content">
-                        <h3><a href="services-details.html">Website Design</a></h3>
-                        <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
+                        <h3><a href="{{service.get_absolute_url}}">{{service.title}}</a></h3>
+                        <p>{{service.descritption}}.</p>
 
-                        <a href="services-details.html" class="read-more">
+                        <a href="" class="read-more">
                             Read More
                             <i class="flaticon-right-arrow"></i>
                         </a>
                     </div>
                 </div>
             </div>
+              
+            {% endfor %}
 
-            <div class="col-lg-3 col-sm-6">
-                <div class="single-services">
-                    <div class="services-img">
-                        <a href="services-details.html">
-                            <img src="{% static 'assets/img/services/services-2.jpg'%}" alt="Image">
-                        </a>
-                    </div>
+          
+            
 
-                    <div class="services-content">
-                        <h3><a href="services-details.html">Web Hosting</a></h3>
-                        <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-
-                        <a href="services-details.html" class="read-more">
-                            Read More
-                            <i class="flaticon-right-arrow"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="single-services">
-                    <div class="services-img">
-                        <a href="services-details.html">
-                            <img src="{% static 'assets/img/services/services-3.jpg'%}" alt="Image">
-                        </a>
-                    </div>
-
-                    <div class="services-content">
-                        <h3><a href="services-details.html">Professional Emails</a></h3>
-                        <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-
-                        <a href="services-details.html" class="read-more">
-                            Read More
-                            <i class="flaticon-right-arrow"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="single-services">
-                    <div class="services-img">
-                        <a href="services-details.html">
-                            <img src="{% static 'assets/img/services/services-4.jpg'%}" alt="Image">
-                        </a>
-                    </div>
-
-                    <div class="services-content">
-                        <h3><a href="services-details.html">Software Developement</a></h3>
-                        <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit sed do.</p>
-
-                        <a href="services-details.html" class="read-more">
-                            Read More
-                            <i class="flaticon-right-arrow"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+          
         </div>
     </div>
 </section>
@@ -360,7 +308,7 @@
                     <div class="overly-two">
                         <div class="pricing-title">
                             <h3>Basic</h3>
-                            <h2><Sub>$</Sub>210000</h2>
+                            <h2><Sub>Tsh</Sub>210000</h2>
                             <span>/Per month</span>
                         </div>
 
@@ -407,50 +355,26 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog">
-                    <div class="blog-img">
-                        <a href="blog-details.html">
-                            <img src="{% static 'assets/img/blog/blog-4.jpg'%}" alt="Image">
-                        </a>
-                    </div>
+           {% for article in articles %}
+           <div class="col-lg-4 col-md-6">
+            <div class="single-blog">
+                <div class="blog-img">
+                    <a href="blog-details.html">
+                        <img src="{{article.image.url}}" alt="">
+                    </a>
+                </div>
 
-                    <div class="blog-content">
-                        <span>January 20, 2021</span>
-                        <h3><a href="blog-details.html">The security risks of changing package owners</a></h3>
-                    </div>
+                <div class="blog-content">
+                    <span>{{article.date}}</span>
+                    <h3><a href="{{ article.get_absolute_url }}">{{article.title}}</a></h3>
                 </div>
             </div>
+        </div>
+             
+           {% endfor %}
 
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog">
-                    <div class="blog-img">
-                        <a href="blog-details.html">
-                            <img src="{% static 'assets/img/blog/blog-5.jpg'%}" alt="Image">
-                        </a>
-                    </div>
+            
 
-                    <div class="blog-content">
-                        <span>January 19, 2021</span>
-                        <h3><a href="blog-details.html">Tips to Protecting Your Business and Family</a></h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-                <div class="single-blog">
-                    <div class="blog-img">
-                        <a href="blog-details.html">
-                            <img src="{% static 'assets/img/blog/blog-6.jpg'%}" alt="Image">
-                        </a>
-                    </div>
-
-                    <div class="blog-content">
-                        <span>January 18, 2021</span>
-                        <h3><a href="blog-details.html">Protect Your Workplace from Cyber Attacks</a></h3>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>

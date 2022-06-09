@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block contents %}
+
+<div class="page-title-area page-title-style-two">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>{{object.title}}</h2>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="bx bx-home"></i>
+                        Home 
+                    </a>
+                </li>
+                <li class="active">Blog Details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Page Title Area -->
+
+<!-- Start Blog Details Area -->
+<div class="blog-details-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="blog-details-content">
+                    <div class="blog-details-img">
+                        <img src="{{object.image.url}}" alt="Image">
+                    </div>
+
+                    <div class="blog-top-content">
+                        <div class="news-content">
+                            <ul class="admin">
+                              
+
+                                <li class="float">
+                                    <i class="bx bx-calendar-alt"></i>
+                                    {{object.date}}
+                                </li>
+                            </ul>
+                            
+                            <h3>{{object.title}}</h3>
+
+                              <p>
+
+                                {{object.description}}
+                              </p>
+                        </div>
+
+                        
+
+                       
+                   
+
+                   
+                </div>
+            </div>
+
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+{% endblock  %}

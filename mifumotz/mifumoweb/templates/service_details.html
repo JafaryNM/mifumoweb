@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block contents %}
+
+
+<div class="page-title-area page-title-style-two">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>{{object.title}}</h2>
+            <ul>
+                
+                <li class="active">{{object.title}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section class="services-details-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="services-details-content">
+                    <div class="services-content">
+                        <div class="services-details-one">
+                            <img src="{{object.image.url}}" alt="Image">
+                        </div>
+                    </div>
+
+                        <h2>{{object.title}}</h2>
+                       
+
+                       
+                    <div class="services-content">
+                      
+                       {{object.descritption}}
+                    </div>
+
+    
+
+                    <div class="related-post">
+                        
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="services-sidebar">
+                    <div class="services-category">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Website Design
+                                    <i class="bx bx-chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Web hosting
+                                    <i class="bx bx-chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Software Development
+                                    <i class="bx bx-chevron-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Professional Emails
+                                    <i class="bx bx-chevron-right"></i>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+
+                    <div class="services-pdf">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="bx bxs-file-pdf"></i>
+                                    Company Profile
+                                </a>
+                            </li>
+                         
+                        </ul>
+                    </div>
+
+                    <div class="services-contact mb-30">
+                        <h3>Contact us to do your new projects</h3>
+                        <a href="contact.html" class="default-btn">
+                            <span>Contact Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+{% endblock contents %}
